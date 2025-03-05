@@ -1,0 +1,93 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Default styling */
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Apply a different background for Apple users */
+.apple-user {
+  background: url("https://www.apple.com/v/home/ba/images/heroes/iphone-14-pro/hero_endframe__cvklg0xk3w6e_large.jpg") no-repeat center center/cover;
+}
+
+/* Light Mode */
+.light-mode {
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+  color: #f8f9fa;
+}
+
+/* Fixed Pink (3D Effect) Mode */
+.threeD-mode {
+  background: radial-gradient(circle at top left, #ff7eb3, #ff758c);
+  color: #ffffff;
+}
+
+/* Container for the To-Do List */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Input and button styling */
+input, button {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.light-mode input, .light-mode button {
+  color: #333;
+  background: #fff;
+}
+
+.dark-mode input, .dark-mode button,
+.threeD-mode input, .threeD-mode button {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+}
+
+/* Fixed Theme Toggle Buttons */
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Ensure the toggle buttons retain their colors */
+.theme-switcher .light-dot {
+  background-color: #f0f0f0;
+}
+.theme-switcher .dark-dot {
+  background-color: #333;
+}
+.theme-switcher .threeD-dot {
+  background: linear-gradient(145deg, #ff758c, #ff4a6e);
+}
+
+/* Prevent the pink theme from overriding toggle button colors */
+.threeD-mode .theme-switcher button {
+  background: none !important;
+}
