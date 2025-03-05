@@ -1,6 +1,7 @@
 import axios from "axios";
+const API_URL = "https://to-do-list-bse9.onrender.com/tasks"; // Update with your Render backend URL
 
-const API_URL = "http://localhost:5000/tasks"; // Ensure this matches your backend
+// const API_URL = "http://localhost:5000/tasks"; // Ensure this matches your backend
 
 export const getTasks = async () => {
   try {
